@@ -10,7 +10,7 @@ export default function Button({ children, ...props }) {
 }
 
 Button.defaultProps = {
-  borderRadius: '1.5rem',
+  borderRadius: '.5rem',
   margin: '.2rem',
   padding: '.5rem',
   fontSize: '1rem',
@@ -40,20 +40,20 @@ const ButtonWrapper = styled.button`
   ${(props) =>
     props.small &&
     css`
-      width: 10rem;
-      height: 4rem;
+      width: 6.25rem;
+      height: 2.5rem;
     `}
   ${(props) =>
     props.middle &&
     css`
-      width: 13rem;
-      height: 4.5rem;
+      width: 8.125rem;
+      height: 2.8125rem;
     `}
   ${(props) =>
     props.large &&
     css`
-      width: 20rem;
-      height: 5rem;
+      width: 12.5rem;
+      height: 3.125rem;
     `}
     &:active {
     filter: brightness(75%);
