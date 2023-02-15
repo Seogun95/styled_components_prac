@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 export default function Button({ children, ...props }) {
   return (
-    <ButtonWrapper isType={props.isType} onClick={props.onClick} {...props}>
+    <ButtonWrapper onClick={props.onClick} {...props}>
       {children}
     </ButtonWrapper>
   );
