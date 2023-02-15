@@ -1,13 +1,70 @@
 import React from 'react';
-import { Color } from '../styles/Theme';
+import { Color, FontSize } from '../styles/Theme';
 import Button from '../common/Button';
+import styled from 'styled-components';
+import { VscBellDot } from 'react-icons/vsc';
+
+const BtnContainer = styled.div`
+  display: flex;
+`;
+
+const BtnChildren = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+`;
 
 function BtnBox() {
   return (
     <>
-      <Button small color={Color.black} fontSize={'2rem'}>
-        안녕
-      </Button>
+      <h1>Button</h1>
+      <BtnContainer>
+        <Button
+          large
+          trans={true}
+          border={`.1875rem solid ${Color.success}`}
+          color={Color.black}
+          fontSize={FontSize.micro}
+        >
+          <BtnChildren>Large Primary Button</BtnChildren>
+        </Button>
+        <Button middle color={Color.black} fontSize={FontSize.micro}>
+          Medium
+        </Button>
+        <Button small color={Color.black} fontSize={FontSize.micro}>
+          Small
+        </Button>
+      </BtnContainer>
+      <BtnContainer>
+        <Button
+          large
+          trans={true}
+          border={`.1875rem solid ${Color.danger}`}
+          color={'DarkRed'}
+          fontSize={FontSize.micro}
+        >
+          <BtnChildren>
+            Large Negative Button <VscBellDot />
+          </BtnChildren>
+        </Button>
+        <Button
+          middle
+          bg={Color.danger}
+          color={'DarkRed'}
+          fontSize={FontSize.micro}
+        >
+          Medium
+        </Button>
+        <Button
+          small
+          bg={Color.danger}
+          color={'DarkRed'}
+          fontSize={FontSize.micro}
+        >
+          Small
+        </Button>
+      </BtnContainer>
     </>
   );
 }
