@@ -55,7 +55,8 @@ const ButtonWrapper = styled.button`
       width: 12.5rem;
       height: 3.125rem;
     `}
-    &:active {
-    filter: brightness(75%);
+    &:active,
+    &:hover {
+    filter: brightness(90%);
   }
 `;
