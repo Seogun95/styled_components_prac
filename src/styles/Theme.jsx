@@ -1,9 +1,8 @@
 export const Color = {
   white: '#ffffff',
   black: '#000000',
-  tomato: 'tomato',
-  brandColor: '#32f9c0',
-  trans: 'transparent',
+  success: 'rgb(85, 239, 196)',
+  danger: 'rgb(250, 177, 160)',
 };
 
 export const FontSize = {
