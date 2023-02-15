@@ -44,7 +44,10 @@ function BtnBox() {
           border={`.1875rem solid ${Color.danger}`}
           color={'DarkRed'}
           fontSize={FontSize.micro}
-          onClick={() => prompt('어렵나요?', '')}
+          onClick={() => {
+            const answer = prompt('어렵나요?', '');
+            console.log(answer);
+          }}
         >
           <BtnChildren>
             Large Negative Button <VscBellDot />
