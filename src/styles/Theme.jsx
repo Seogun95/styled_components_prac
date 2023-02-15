@@ -1,28 +1,39 @@
-export const Color = {
-  white: '#ffffff',
-  black: '#000000',
-  success: 'rgb(85, 239, 196)',
-  danger: 'rgb(250, 177, 160)',
+export const CL = {
+  white: 'white',
+  black: 'black',
+  trans: 'transparent',
+  lightWhite: '#eeeeee',
+  dark_White: '#bdbdbd',
+  darkMint: '#25c79a',
+  mint: '#54efc3',
+  pink: '#fe918d',
+  darkPink: '#ff6863',
+  ligthPink: '#fab1a0',
+  pastelRed: '#f2c3bd',
+  pastelOrange: '#f3d2b1',
+  pastelBlue: '#b9e7dd',
+  pastelYellow: '#f6e1b1',
+  pastelGreen: '#bfdaa9',
 };
 
-export const FontSize = {
-  large: '3rem',
-  medium: '1.75rem',
-  defalut: '1.125rem',
-  small: '1rem',
-  micro: '0.875rem',
+export const FS = {
+  xl: '1.75rem',
+  l: '1.125rem',
+  m: '1rem',
+  s: '0.875rem',
+  xs: '.625rem',
 };
 
-export const FontWeight = {
-  weight700: 700,
-  default: 600,
-  weight400: 400,
+export const FW = {
+  bold: 700,
+  semiBold: 600,
+  normal: 400,
 };
 
-export const BorderRadius = {
+export const BR = {
   round: '100%',
   half_round: '50%',
   large: '3rem',
-  defalut: '1.5rem',
+  normal: '1rem',
   small: '0.5rem',
 };

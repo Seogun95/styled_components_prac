@@ -1,5 +1,5 @@
 import React from 'react';
-import { Color, FontSize } from '../styles/Theme';
+import { CL, FS } from '../styles/Theme';
 import Button from '../common/Button';
 import styled from 'styled-components';
 import { VscBellDot } from 'react-icons/vsc';
@@ -15,7 +15,7 @@ const BtnChildren = styled.div`
   gap: 7px;
 `;
 
-function BtnBox() {
+export default function BtnBox() {
   return (
     <>
       <h1>Button</h1>
@@ -23,17 +23,16 @@ function BtnBox() {
         <Button
           large
           trans={true}
-          border={`.1875rem solid ${Color.success}`}
-          color={Color.black}
-          fontSize={FontSize.micro}
+          border={`.1875rem solid ${CL.mint}`}
+          fontSize={FS.micro}
           onClick={() => alert('버튼을 만들어보세요')}
         >
           <BtnChildren>Large Primary Button</BtnChildren>
         </Button>
-        <Button middle color={Color.black} fontSize={FontSize.micro}>
+        <Button middle fontSize={FS.micro}>
           Medium
         </Button>
-        <Button small color={Color.black} fontSize={FontSize.micro}>
+        <Button small fontSize={FS.micro}>
           Small
         </Button>
       </BtnContainer>
@@ -41,9 +40,9 @@ function BtnBox() {
         <Button
           large
           trans={true}
-          border={`.1875rem solid ${Color.danger}`}
-          color={'DarkRed'}
-          fontSize={FontSize.micro}
+          border={`.1875rem solid ${CL.ligthPink}`}
+          color={CL.darkPink}
+          fontSize={FS.micro}
           onClick={() => {
             const answer = prompt('어렵나요?', '');
             console.log(answer);
@@ -55,23 +54,16 @@ function BtnBox() {
         </Button>
         <Button
           middle
-          bg={Color.danger}
-          color={'DarkRed'}
-          fontSize={FontSize.micro}
+          bg={CL.ligthPink}
+          color={CL.darkPink}
+          fontSize={FS.micro}
         >
           Medium
         </Button>
-        <Button
-          small
-          bg={Color.danger}
-          color={'DarkRed'}
-          fontSize={FontSize.micro}
-        >
+        <Button small bg={CL.ligthPink} color={CL.darkPink} fontSize={FS.micro}>
           Small
         </Button>
       </BtnContainer>
     </>
   );
 }
-
-export default BtnBox;

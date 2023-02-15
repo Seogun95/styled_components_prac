@@ -1,12 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { CL } from '../styles/Theme';
 
-export default function Button({ children, ...props }) {
-  return (
-    <ButtonWrapper onClick={props.onClick} {...props}>
-      {children}
-    </ButtonWrapper>
-  );
+export default function Button(props) {
+  return <ButtonWrapper {...props}>{props.children}</ButtonWrapper>;
 }
 
 Button.defaultProps = {
@@ -14,9 +11,9 @@ Button.defaultProps = {
   margin: '.2rem',
   padding: '.5rem',
   fontSize: '1rem',
-  fontWeight: '600',
-  color: 'white',
-  bg: '#32f9c0',
+  fontWeight: '400',
+  color: 'black',
+  bg: CL.mint,
   border: 'none',
   weight: 'middle',
 
@@ -55,8 +52,13 @@ const ButtonWrapper = styled.button`
       width: 12.5rem;
       height: 3.125rem;
     `}
-    &:active,
-    &:hover {
-    filter: brightness(90%);
+    & {
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  &:active,
+  &:hover,
+  &:active {
+    filter: brightness(97%);
   }
 `;

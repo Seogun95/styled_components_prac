@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Input from '../common/Input';
 import Button from '../common/Button';
-import { Color } from '../styles/Theme';
+import { CL } from '../styles/Theme';
 
 const InputContainer = styled.div`
   display: flex;
@@ -50,7 +50,7 @@ function InputBox() {
           value={inputData.price}
           onChange={priceInputHandler}
         />
-        <Button middle color={Color.black} onClick={onSubmitHandler}>
+        <Button middle color={CL.black} onClick={onSubmitHandler}>
           저장
         </Button>
       </InputContainer>
