@@ -26,6 +26,7 @@ function BtnBox() {
           border={`.1875rem solid ${Color.success}`}
           color={Color.black}
           fontSize={FontSize.micro}
+          onClick={() => alert('버튼을 만들어보세요')}
         >
           <BtnChildren>Large Primary Button</BtnChildren>
         </Button>
@@ -43,6 +44,7 @@ function BtnBox() {
           border={`.1875rem solid ${Color.danger}`}
           color={'DarkRed'}
           fontSize={FontSize.micro}
+          onClick={() => prompt('어렵나요?', '')}
         >
           <BtnChildren>
             Large Negative Button <VscBellDot />
